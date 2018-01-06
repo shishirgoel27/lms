@@ -18,9 +18,9 @@ public final class Library {
 		return library;
 	}
 
-	private Map<String, Book> books;
+	private Map<String, Book> books = new ArrayList<>();
 	
-	private Map<String, User> users;
+	private Map<String, User> users = new ArrayList<>();
 
 	public boolean addBook(Book b) {
 		if (books.containsKey(b.getTitle())) {
