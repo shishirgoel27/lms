@@ -1,6 +1,7 @@
 package com.cleartrip.hackathon.lms.domain;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 public final class Library {
@@ -18,9 +19,9 @@ public final class Library {
 		return library;
 	}
 
-	private Map<String, Book> books = new ArrayList<>();
+	private Map<String, Book> books = new HashMap<>();
 	
-	private Map<String, User> users = new ArrayList<>();
+	private Map<String, User> users = new HashMap<>();
 
 	public boolean addBook(Book b) {
 		if (books.containsKey(b.getTitle())) {
