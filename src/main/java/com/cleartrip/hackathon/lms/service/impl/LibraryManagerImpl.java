@@ -41,6 +41,7 @@ public class LibraryManagerImpl implements ILibraryManager, ILend {
 			List<Book> userBooks = user.getBooks();
 			userBooks.add(b);
 			user.setBooks(userBooks);
+			library.removeBook(title);
 			return userBooks.size();
 		}
 		return user.getBooks().size();
@@ -53,7 +54,7 @@ public class LibraryManagerImpl implements ILibraryManager, ILend {
 			userBooks.remove(book);
 			user.setBooks(userBooks);
 			library.addBook(book);
-			userBooks.size();
+			return userBooks.size();
 		}
 		return user.getBooks().size();
 	}
